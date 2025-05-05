@@ -255,8 +255,8 @@ const cafes = [
       "googleMaps": "https://www.google.com/maps/search/5+crossties+coffee+Shibuya+Tokyo"
     },
     {
-      "name": "Gehsary coffee hibiya",
-      "area": "Yurakucho, Chiyoda",
+      "name": "Gehsary coffee Hibiya",
+      "area": "Hibiya",
       "address": "1-6-3 Yurakucho, Chiyoda City, Tokyo 100-0006",
       "hasWifi": true,
       "hasPlugs": true,
@@ -281,8 +281,8 @@ const cafes = [
     },
     {
       "name": "Reward Coffee",
-      "area": "Nakakasai, Edogawa",
-      "address": "5-42-3 Nakakasai, Edogawa City, Tokyo 134-0083",
+      "area": "Nihonbashi",
+      "address": "1 Chome-2-10 Shinkawa, Chuo City, Tokyo 104-0033, Japan",
       "hasWifi": true,
       "hasPlugs": true,
       "features": [
@@ -305,17 +305,18 @@ const cafes = [
       "googleMaps": "https://www.google.com/maps/search/Natsumezaka+Coffee+Tokyo"
     },
     {
-      "name": "AllPress Espressso",
-      "area": "Minami-Suna, Koto",
-      "address": "9-5-10 Minami-Suna, Koto City, Tokyo 136-0076",
-      "hasWifi": true,
-      "hasPlugs": true,
-      "features": [
-        "Power"
-      ],
-      "description": NaN,
-      "googleMaps": "https://www.google.com/maps/search/AllPress+Espressso+Tokyo"
+        "name": "Allpress Espresso Toranomon",
+        "area": "Toranomon, Minato",
+        "address": "1-chōme-1-2 Atago, Minato City, Tokyo 105-0002",
+        "hasWifi": true,
+        "hasPlugs": true,
+        "features": [
+          "Wifi", "Power"
+        ],
+        "description": "A stylish, New Zealand-born specialty coffee shop tucked away in Toranomon. Known for its wood-fired roasted beans and laid-back industrial vibe, it offers both indoor and outdoor seating. A great place to work or relax with reliable WiFi, power outlets, and expertly brewed espresso.",
+        "googleMaps": "https://www.google.com/maps/place/Allpress+Espresso+Toranomon+Cafe+%E2%94%82+%E3%82%AA%E3%83%BC%E3%83%AB%E3%83%97%E3%83%AC%E3%82%B9%E3%83%BB%E3%82%A8%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%82%BD+%E8%99%8E%E3%83%8E%E9%96%80%E3%82%AB%E3%83%95%E3%82%A7/@35.6676443,139.7501533,17z"
     }
+      
   ];
 // Get unique areas for the filter
 const areas = [...new Set(cafes.map(cafe => cafe.area))];
