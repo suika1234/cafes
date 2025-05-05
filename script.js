@@ -306,7 +306,7 @@ const cafes = [
     },
     {
         "name": "Allpress Espresso Toranomon",
-        "area": "Toranomon, Minato",
+        "area": "Toranomon",
         "address": "1-chōme-1-2 Atago, Minato City, Tokyo 105-0002",
         "hasWifi": true,
         "hasPlugs": true,
