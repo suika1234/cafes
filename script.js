@@ -90,7 +90,7 @@ const cafes = [
     },
     {
       "name": "Good Sound Coffee",
-      "area": "Kamimeguro, Meguro",
+      "area": "Nakameguro",
       "address": "1-6-5 Kamimeguro, Meguro City, Tokyo 153-0051",
       "hasWifi": true,
       "hasPlugs": true,
@@ -193,7 +193,7 @@ const cafes = [
     },
     {
       "name": "Lit Coffee & Tea Stand",
-      "area": "Shiba, Minato",
+      "area": "Shiba",
       "address": "1F Radice Shiba Building, 2-15-15 Shiba, Minato City, Tokyo 105-0014",
       "hasWifi": true,
       "hasPlugs": false,
