@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo Work-Friendly Cafes </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Tokyo Work-Friendly Cafes</h1>
+            <p>Find the perfect spot to work remotely in the city</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="filters">
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Search cafes...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="filter-options">
+                <select id="area-filter">
+                    <option value="">All Areas</option>
+                    <!-- Areas will be populated by JavaScript -->
+                </select>
+                <select id="wifi-filter">
+                    <option value="">WiFi Status</option>
+                    <option value="yes">Has WiFi</option>
+                    <option value="no">No WiFi</option>
+                </select>
+                <select id="plugs-filter">
+                    <option value="">Power Outlets</option>
+                    <option value="yes">Has Power Outlets</option>
+                    <option value="no">No Power Outlets</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="cafes-grid" id="cafes-container">
+            <!-- Cafe cards will be populated by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Cafes Directory</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
