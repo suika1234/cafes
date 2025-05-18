@@ -18,7 +18,7 @@ const cafes = [
       "area": "Nihonbashi",
       "address": "15-2 Nihonbashi-Odenmacho, Chuo City, Tokyo 103-0011",
       "hasWifi": true,
-      "hasPlugs": false,
+      "hasPlugs": 'limited',
       "features": [
         "WiFi"
       ],
@@ -255,7 +255,7 @@ const cafes = [
       "googleMaps": "https://www.google.com/maps/search/5+crossties+coffee+Shibuya+Tokyo"
     },
     {
-      "name": "Gehsary coffee Hibiya",
+      "name": "Geshary coffee Hibiya",
       "area": "Hibiya",
       "address": "1-6-3 Yurakucho, Chiyoda City, Tokyo 100-0006",
       "hasWifi": true,
@@ -265,7 +265,7 @@ const cafes = [
         "Power"
       ],
       "description": "Trendy espresso bar in Hibiya with single-origin offerings and fast service. Modern design with convenient plug access.",
-      "googleMaps": "https://www.google.com/maps/search/Gehsary+coffee+hibiya+Tokyo"
+      "googleMaps": "https://www.google.com/maps/search/Geshary+coffee+hibiya+Tokyo"
     },
     {
       "name": "toggle hotel café/bar",
@@ -297,9 +297,10 @@ const cafes = [
       "area": "Shinjuku",
       "address": "1-11-10 Toyama, Shinjuku City, Tokyo 162-0052",
       "hasWifi": true,
-      "hasPlugs": false,
+      "hasPlugs": true,
       "features": [
-        "WiFi"
+        "WiFi",
+        "Power"
       ],
       "description": "A serene hideout near Waseda. Natsumezaka Coffee serves pour-over in a tatami-accented setting perfect for reading.",
       "googleMaps": "https://www.google.com/maps/search/Natsumezaka+Coffee+Tokyo"
@@ -336,7 +337,15 @@ function createCafeCard(cafe) {
     card.className = 'cafe-card';
     
     const wifiStatus = cafe.hasWifi ? 'Yes' : 'No';
-    const plugsStatus = cafe.hasPlugs ? 'Yes' : 'No';
+    let plugsStatus = 'No';
+    let plugsClass = 'plugs-no';
+    if (cafe.hasPlugs === true) {
+        plugsStatus = 'Yes';
+        plugsClass = 'plugs-yes';
+    } else if (cafe.hasPlugs === 'limited') {
+        plugsStatus = 'Limited';
+        plugsClass = 'plugs-limited';
+    }
     
     card.innerHTML = `
         <div class="cafe-info">
@@ -347,7 +356,7 @@ function createCafeCard(cafe) {
                 <span class="feature-tag wifi-${cafe.hasWifi ? 'yes' : 'no'}">
                     <i class="fas fa-wifi"></i> WiFi: ${wifiStatus}
                 </span>
-                <span class="feature-tag plugs-${cafe.hasPlugs ? 'yes' : 'no'}">
+                <span class="feature-tag ${plugsClass}">
                     <i class="fas fa-plug"></i> Power Outlets: ${plugsStatus}
                 </span>
                 ${cafe.features && cafe.features.filter(f => f !== 'WiFi' && f !== 'Power' && f !== 'Power Outlets').map(feature => `<span class="feature-tag">${feature}</span>`).join('')}
